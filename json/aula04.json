@@ -1,0 +1,36 @@
+
+
+
+[
+    
+    {        
+        "codigo":1,
+        "nome":"Willian",
+        "idade":22,
+        "email":"willian@hotmail.com",
+        "telefone":48343434334        
+        
+    },
+    
+    
+    {
+        "codigo":2,
+        "nome":"juliana",
+        "idade":20,
+        "email":"juliana@bol.com.br",
+        "telefone":434343324
+        
+    },
+    
+    
+    {
+        "codigo":3,
+        "nome":"rainara",
+        "idade":19,
+        "email":"rainara@hotmail.com",
+        "telefone":482323433
+    }
+    
+    
+    
+]

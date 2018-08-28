@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        
+        
+        
+        
+        <button id="alerta">Clique aqui para exibir um alerta</button>
+        <button id="multiplicar">Clique aqui para multiplicar</button>
+        <button id="sortea">Clique aqui para Sortea um numero de 0 - 10</button>
+        
+        <div id="mostrarGanhador"></div>
+        
+        
+        <script src="../arqjquery/jquery-1.12.4.js"> </script>
+        
+        
+        <script>
+            
+           function welcome (name){
+                alert("Hello " + name);
+            }
+            //Na hora de definir uma nova função, ela funcionara tanto embaixo quanto em cima.
+            
+            function multiplicar(num1,num2){
+                var result = num1*num2;
+                return result;
+            }
+            
+            function gerarNumeroAleatorio(num){
+                var sortiado = Math.floor(Math.random()*num);
+                return sortiado;
+            }
+            
+            
+            $(document).ready(function(){
+               $("#alerta").click(function(){
+                  welcome("Willian"); 
+               }); 
+               
+               $("#multiplicar").click(function(){
+                  var total = multiplicar(5,5);
+                  alert("A multiplicação entre 5 * 5 é: "+total);
+               });
+               
+               $("#sortea").click(function(){
+                  var sorteado = gerarNumeroAleatorio(11);
+                  alert(sorteado);
+                  
+                  if(sorteado === 10){
+                      alert("Você conseguio o maior numero sorteado!");
+                      $("#mostrarGanhador").append("<img src='../img/bol1.jpg'/>");
+                  }
+               });
+               
+               
+            });
+            
+             
+            
+            
+        </script>
+        
+    </body>
+</html>

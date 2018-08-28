@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .hover{
+                border:solid #f00 3px;
+                
+            }
+            
+            .no_hover{
+                border: solid #000 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header" class ="no_hover"><h1> Header </h1> </div>
+        <button type="button" id="btn1">Click to add </button>
+        <button type="button" id="btn2"> Click to remove</button>
+        <script src="../arqjquery/jquery-1.12.4.js"></script>
+        
+        <script>
+        
+        $(document).ready(function(){
+           
+            $("#btn1").click(function(){
+                 $("#header").addClass("hover"); // Adiciona a class hover
+                 $("#header").removeClass("no_hover"); // remove a classe no_hover
+                 // tem que remover a classe no_hover para que possa ser a classe que está sendo usada.
+            });
+            
+            $("#btn2").click(function(){
+               $("#header").removeClass("hover");
+               $("#header").addClass("no_hover");
+            });
+            
+        });
+        
+        </script>
+            
+    </body>
+</html>

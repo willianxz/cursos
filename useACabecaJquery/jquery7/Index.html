@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        
+        
+        <img src="../img/bol1.jpg">
+        
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        
+        <img src="../img/bol2.jpg">
+        
+        
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        
+        <img src="../img/bol3.jpg">
+        
+        
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        <p>Testando testando testando testando testando</p>
+        
+        
+        
+        
+        <script src="../arqjquery/jquery-1.12.4.js"> </script>
+        
+        <script>
+            $(document).ready(function(){
+               $("img").mouseenter(function(){
+                  $(this).width(1000);
+                  
+               });
+               
+               $("img").mouseleave(function(){
+                  $(this).width(500); // Aqui se não usar o this e usar img, vai aplicar a todas as fotos o efeito!
+               });
+            });
+            
+        </script>
+    </body>
+</html>

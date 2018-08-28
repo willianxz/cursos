@@ -1,0 +1,24 @@
+Iniciando o codeign 
+---------------------------------------------------------------------------------
+1- Trocar configurar a url (config.php) base url/index page
+2- trocar a router (rota) (router.php) default_controller
+3- configurar um arquivo .htaccess e coloca-lo no mesmo diretorio do sistema.
+
+arquivo htacess:
+
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1
+
+
+-----------------------------------------------------------------------------------
+
+
+Curso  RBtech no youtube: 
+
+ci = ensina sobre como funciona o codeign.
+
+ci2 = ensina a passar dados do controller para as view.
+
+ci3 = ensina como fatiar o html em head,body,footer.

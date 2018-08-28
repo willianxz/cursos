@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+           
+        <style>
+            #texto{
+                width:auto;
+                height:auto;
+                background: green;
+            }    
+            
+             #texto2{
+                width:auto;
+                height:auto;
+                background: purple;
+            }    
+            
+             #texto3{
+                width:auto;
+                height:auto;
+                background: yellow;
+            }   
+            
+             #texto4{
+                width:auto;
+                height:auto;
+                background: skyblue;
+            } 
+            
+            #mostrarTexto{
+                width:auto;
+                height:auto;
+                background: brown;
+            }
+            
+            #imagem{
+                width: auto;
+                height: auto;
+                display: none; // para não mostrar essa div que contem a imagem, quando iniciar o navegador.
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="texto">
+            <p>hide e slideToggle</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+        </div>
+        
+        
+          <div id="texto2">
+            <p> hide</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+        </div>
+        
+         <div id="mostrarImagem">
+            Clique Aqui para esconder a imagem: ("img") fadeIn(1000),slideToggle("slow")
+       </div>
+        <div id="imagem">
+            <img src="../img/docinhos1.jpg"/>
+            </div>
+        
+          <div id="texto3">
+            <p> fadeIn(1000),slideToggle("slow")</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+        </div>
+        
+        
+         <div id="texto4">
+            <p> fadeOut(1000),slideToggle("slow")</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+            <p> Testando Texto Testando Texto Testando Texto Testando Texto</p>
+        </div>
+        
+       
+        
+         <script src="../arqjquery/jquery-1.12.4.js"></script>
+         
+          <!-- 
+        Os scripts estão sendo colocados aqui, por que de acordo com o livro use a cabeça,há um problema
+        se botar o script no header que bloqueia os dowloads paralelos no navegador, isso significa poder fazer
+        dowload de mais de uma imagem por vez, mas se estiver o script no header, não poderá ser feito mais o dowload
+        de varios itens paralelos.
+        Deixar o script no final acelera tambem o tempo de carregamento da pagina web.
+         -->
+        <script>
+            $(document).ready(function(){
+               $("#texto").click(function(){
+                  $("#texto").hide(); 
+                  $("#texto").slideToggle("slow");
+               }); 
+               
+               $("#texto2").click(function(){
+                  $("#texto2").hide(); 
+               });
+               
+               $("#texto3").click(function(){
+                  $("#texto3").fadeIn(1000); 
+                   $("#texto3").slideToggle("slow");
+               });
+               
+                 $("#texto4").click(function(){
+                  $("#texto4").fadeOut(1000);
+                   $("#texto4").slideToggle("slow");
+                   $("#texto4").css({background: "red"});
+                   
+               });
+               
+              $("#mostrarImagem").click(function(){
+                    $("img").fadeIn(1000);
+                    $("#imagem").slideToggle("slow");
+                  
+                });
+               
+               
+            });
+        </script>
+    </body>
+</html>

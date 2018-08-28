@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+                img{
+                    width: 100%;
+                    height: auto;
+                    
+                }
+            </style>
+    </head>
+  
+    <body>
+        
+        
+        <button id="aplicard"> Adicionar texto ao html</button>
+        <div id="desconto">
+            
+        </div>
+        
+       
+        
+        <hr>
+        
+        <div id="minhaLista">Lista do que devo aprender: </div>
+        <ol>
+            <li>Aprender PHP</li>
+            <li>Aprender JAVA</li>
+            <li>Aprender PASCAL</li>
+            <li>Aprender JQUERY</li>
+        </ol>
+        
+        
+        <button id="remover">Remover Itens da lista</button>
+        
+        <button id="adicionar">Adicionar os Itens</button>
+        
+        <hr>
+        
+        <div id="mostrarImagem1"></div>
+        
+         <button id="adicionarImagem">Adicionar uma imagem</button>
+         
+          <button id="removerImagem">Remover Imagens</button>
+        
+         <script src="../arqjquery/jquery-1.12.4.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+               $("#aplicard").click(function(){
+                  var desconto = Math.floor((Math.random()*5)+ 5); 
+                  var desconto_msg = "<p> Seu desconto é: "+desconto+"%</p>";
+                  alert(desconto_msg);
+                  $("#desconto").append(desconto_msg);
+               }); 
+               
+               $("#remover").click(function(){
+                   $("li").remove();
+                   
+               }); // end click remover
+               
+               $("#adicionar").click(function(){
+                  var texto = "<li>Aprender PHP</li>"+
+                              "<li>Aprender JAVA</li>"+
+                              "<li>Aprender PASCAL</li>"+
+                              "<li>Aprender JQUERY</li>";
+                   $("ol").append(texto);
+               });
+               
+               $("#adicionarImagem").click(function(){
+                  var imagem = "<img src='../img/bol1.jpg'/>"; 
+                  alert("Você adicionou uma imagem!");
+                  $("#mostrarImagem1").append(imagem);
+                  
+               });
+               
+               $("#removerImagem").click(function(){
+                  alert("Você removeu todas as imagens!");
+                  $("img").remove();
+                 
+               });
+               
+               
+            });
+        </script>
+        
+        
+    </body>
+</html>

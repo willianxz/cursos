@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #semThis{
+                background: yellow;
+                 font-size: 20px;
+            }
+            #comThis{
+                background: green;
+                 font-size: 20px;
+            }
+         </style>
+    </head>
+    <body>
+        
+        <div id="semThis">
+        <h2>SEM THIS </h2>
+        <div class="guess_box">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+       <div class="guess_box">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        <div class="guess_box">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        <div class="guess_box">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        </div>
+        
+         <p>Sem o this ele adicionara para todos ao clicar em apenas um,ja com o this não.</p>
+        
+        
+        <div id="comThis">
+        <h2>COM THIS </h2>
+        <div class="guess_box2">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+       <div class="guess_box2">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        <div class="guess_box2">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        <div class="guess_box2">Clique para adicionar um desconto qualquer</div>
+        <hr>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <script src="../arqjquery/jquery-1.12.4.js"></script>
+        
+        
+        <script>
+            
+            $(document).ready(function(){
+               $(".guess_box").click(function(){
+                   var desconto = (Math.floor(Math.random()* 5)+5);
+                    var desconto_msg = "<p>Seu desconto foi de: "+desconto+"% </p>";
+                    alert(desconto);
+                    $(".guess_box").append(desconto_msg);                    
+               });
+               
+               
+               $(".guess_box2").click(function(){
+                   $(".guess_box2 p").remove(); // botemos esse codigo para quando o usuario clicar novamente
+                   //sumir a ultima menssagem de desconto e colocar uma nova.
+                 var desconto = (Math.floor(Math.random()* 5)+5);
+                    var desconto_msg = "<p>Seu desconto foi de: "+desconto+"% </p>";
+                    alert(desconto);
+                     $(this).append(desconto_msg); 
+               });
+               
+               
+            });
+            
+        </script>
+        
+        
+    </body>
+</html>
